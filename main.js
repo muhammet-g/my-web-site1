@@ -40,3 +40,15 @@ function chekBoxes() {
     }
   });
 }
+
+function updateCopyrightYear() {
+  var currentDate = new Date();
+  var currentYear = currentDate.getFullYear();
+  var copyrightElement = document.getElementById("copyright-year");
+
+  if (copyrightElement) {
+    copyrightElement.textContent = currentYear;
+  }
+}
+
+updateCopyrightYear();

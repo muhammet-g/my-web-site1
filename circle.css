@@ -1,0 +1,203 @@
+/* Skills page */
+.skills {
+  background-color: #000;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  row-gap: 3rem;
+}
+.skills > h2 {
+  display: block;
+  /* margin-top: 1rem; */
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.skills .grid {
+  row-gap: 5rem;
+}
+.block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  border-radius: 50%;
+}
+
+.box::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 28px);
+  height: calc(100% + 28px);
+  border-radius: 50%;
+  /* border: 1px solid #353535; */
+}
+
+.box .number span {
+  color: #e9e9e9;
+}
+
+.box .number .num {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.box .number .sub {
+  font-size: 20px;
+}
+
+.box .title {
+  font-size: 15px;
+  color: #9b9b9b;
+}
+
+.dots {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 2s transform, 2s opacity ease;
+}
+
+.dots::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 50%;
+  border-radius: 50%;
+
+  transform: translateX(-50%);
+}
+.block .title i {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.html5-icon .dots::after {
+  background-color: rgb(223, 75, 30);
+  box-shadow: 0 0 5px 2px rgb(223, 75, 30);
+}
+.css3-icon .dots::after {
+  background-color: rgba(0, 128, 255, 1);
+  box-shadow: 0 0 5px 2px rgba(0, 128, 255, 1);
+}
+.js-icon .dots::after {
+  background-color: rgba(255, 204, 0, 1);
+  box-shadow: 0 0 5px 2px rgba(255, 204, 0, 1);
+}
+.bootstrap-icon .dots::after {
+  background-color: rgba(128, 0, 128, 1);
+  box-shadow: 0 0 5px 2px rgba(128, 0, 128, 1);
+}
+.html5-icon .circle {
+  stroke: rgb(223, 75, 30);
+}
+.css3-icon .circle {
+  stroke: rgba(0, 128, 255, 1);
+}
+.js-icon .circle {
+  stroke: rgba(255, 204, 0, 1);
+}
+.bootstrap-icon .circle {
+  stroke: rgba(128, 0, 128, 1);
+}
+
+.html5-icon .title i {
+  color: rgb(223, 75, 30);
+}
+.css3-icon .title i {
+  color: rgba(0, 128, 255, 1);
+}
+.js-icon .title i {
+  color: rgba(255, 204, 0, 1);
+}
+.bootstrap-icon .title i {
+  color: rgba(128, 0, 128, 1);
+}
+.html5-icon .number span {
+  color: rgb(223, 75, 30);
+}
+.css3-icon .number span {
+  color: rgba(0, 128, 255, 1);
+}
+.js-icon .number span {
+  color: rgba(255, 204, 0, 1);
+}
+.bootstrap-icon .number span {
+  color: rgba(128, 0, 128, 1);
+}
+.html5-icon .box {
+  color: rgb(223, 75, 30);
+}
+.css3-icon .box {
+  color: rgba(0, 128, 255, 1);
+}
+.js-icon .box {
+  color: rgba(255, 204, 0, 1);
+}
+.bootstrap-icon .box {
+  color: rgba(128, 0, 128, 1);
+}
+
+.svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  transform: rotate(-90deg);
+}
+
+.circle {
+  /* stroke: url(#gradientStyle); */
+  stroke-width: 10px;
+  stroke-dasharray: 503;
+  stroke-dashoffset: 503;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transition: 2s stroke-dashoffset;
+}
+
+.html5-icon .svg {
+  box-shadow: inset 0 0 10px 4px rgb(223, 75, 30),
+    0 0 36px 10px rgb(223, 75, 30);
+}
+.css3-icon .svg {
+  box-shadow: inset 0 0 10px 4px rgba(0, 128, 255, 1),
+    0 0 36px 10px rgba(0, 128, 255, 1);
+}
+.js-icon .svg {
+  box-shadow: inset 0 0 10px 4px rgba(255, 204, 0, 1),
+    0 0 36px 10px rgba(255, 204, 0, 1);
+}
+.bootstrap-icon .svg {
+  box-shadow: inset 0 0 10px 4px rgba(128, 0, 128, 1),
+    0 0 36px 10px rgba(128, 0, 128, 1);
+}
+
+.svg {
+  border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  .skills .grid-col-2 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "jquery": "^3.7.1",
-    "jquery-circle-progress": "^1.2.2",
-    "progressbar.js": "^1.1.1"
+    "jquery-circle-progress": "^1.2.2"
   }
 }
